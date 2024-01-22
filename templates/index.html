@@ -16,13 +16,7 @@
   <body>
     <div class="app">
       <h1>CONVERTER</h1>
-      <form
-        hx-post="/convert"
-        hx-target="#result"
-        hx-swap="outerHTML"
-        enctype="multipart/form-data"
-        id="form"
-      >
+      <form action="/convert" method="post" enctype="multipart/form-data" id="form">
         <input type="file" name="file"/>
         <select name="format">
           <option value="gif">gif</option>
