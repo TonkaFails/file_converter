@@ -12,6 +12,8 @@ def convert_file(output_format, input_path, output_path):
             ffmpeg.input(input_path).output(output_path).run()
         elif output_format == 'png' or output_format == 'jpg' or output_format == 'jpeg':
             ffmpeg.input(input_path).output(output_path, vframes=1).run()
+        elif output_format == 'mp3':
+            ffmpeg.input(input_path).output(output_path, audio_bitrate='192k').run()
     except ffmpeg.Error as e:
         print(e.stderr)
         raise
