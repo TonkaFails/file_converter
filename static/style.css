@@ -1,16 +1,82 @@
 .app {
-    height: 100vh;
-    width: 100vw;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-
-    background: black;
-    color: whitesmoke;
+  height: 100vh !important;
+  width: 100vw !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: black;
+  color: whitesmoke;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
 }
-
-#form {
-    display: flex;
-    flex-direction: column;
+.app .text {
+  text-align: center;
+  margin: 60px;
 }
+.app .text #title {
+  font-size: 10vh;
+  margin: 5px;
+}
+.app .text #paragraph {
+  font-size: 5vh;
+  margin: 5px;
+}
+.app .form-container .type-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.app .form-container .type-form #file-upload {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+.app .form-container .type-form #file-upload #file-chosen {
+  font-size: 3vh;
+}
+.app .form-container .type-form #file-upload #input {
+  display: none;
+}
+.app .form-container .type-form #file-upload #custom-input {
+  margin: 5px;
+  padding: 5px;
+  font-size: 4vh;
+  width: 16vw;
+  border: white 1px solid;
+  border-radius: 8px;
+  text-align: center;
+}
+.app .form-container .type-form #file-upload #custom-input:hover {
+  color: black;
+  background: white;
+}
+.app .form-container .type-form #select-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.app .form-container .type-form #select-container #select {
+  margin: 5px;
+  padding: 5px;
+  width: 14vw;
+  text-align: center;
+  font-size: 5vh;
+  color: white;
+  background: black;
+  border-radius: 8px;
+}
+.app .form-container .type-form #select-container #convertBtn {
+  background: black;
+  color: white;
+  margin: 5px;
+  padding: 5px;
+  border: white 1px solid;
+  border-radius: 8px;
+  font-size: 5vh;
+  width: 14vw;
+}
+.app .form-container .type-form #select-container #convertBtn:hover {
+  background: white;
+  color: black;
+}/*# sourceMappingURL=style.css.map */

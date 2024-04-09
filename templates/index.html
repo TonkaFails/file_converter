@@ -6,28 +6,50 @@
     <script src="https://unpkg.com/htmx.org"></script>
     <link
       rel="stylesheet"
-      href="{{ url_for('static', filename='style.css') }}"
-    />
+      href="{{ url_for('static', filename='style.css') }}" />
     <link
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
+      rel="stylesheet" />
   </head>
   <body>
     <div class="app">
-      <h1>CONVERTER</h1>
-      <form action="/convert" method="post" enctype="multipart/form-data" id="form">
-        <input type="file" name="file"/>
-        <select name="format">
-          <option value="wav">wav</option>
-          <option value="gif">gif</option>
-          <option value="mp4">mp4</option>
-          <option value="png">png</option>
-          <option value="jpg">jpg</option>
-        </select>
-        <input type="submit" value="Convert" />
-      </form>
-      <div id="result"></div>
+      <div class="text">
+        <h1 id="title">CONVERTER</h1>
+        <p id="paragraph">Upload file and convert to selected type</p>
+      </div>
+      <div class="form-container">
+        <form
+          action="/convert"
+          method="post"
+          enctype="multipart/form-data"
+          class="type-form">
+          <div id="file-upload">
+            <label for="input" id="custom-input">Choose File</label>
+            <input type="file" name="file" id="input" onchange="enableBtn()"/>
+            <span id="file-chosen">No file</span>
+          </div>
+          <div id="select-container">
+            <select name="format" id="select">
+              <option value="wav">wav</option>
+              <option value="gif">gif</option>
+              <option value="mp4">mp4</option>
+              <option value="png">png</option>
+              <option value="jpg">jpg</option>
+            </select>
+            <input type="submit" value="Convert" id="convertBtn" disabled/>
+          </div>
+          </form>
+          <div id="result"></div>
+      </div>
     </div>
   </body>
+  <script>
+    function enableBtn() {
+      var convertBtn = document.getElementById('convertBtn');
+      var fileInput = document.getElementById('input');
+      var fileName = fileInput.files[0] ? fileInput.files[0].name : 'No file';
+      document.getElementById('file-chosen').textContent = fileName;
+      convertBtn.disabled = !fileInput.files.length;
+    }
+  </script>
 </html>

@@ -1,0 +1,69 @@
+.app
+    height: 100vh !important
+    width: 100vw !important
+    display: flex
+    align-items: center
+    justify-content: center
+    flex-direction: column
+    background: black
+    color: whitesmoke
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
+    .text
+        text-align: center
+        margin: 60px
+        #title
+            font-size: 10vh
+            margin: 5px
+        #paragraph
+            font-size: 5vh
+            margin: 5px
+    .form-container
+        .type-form
+            display: flex
+            flex-direction: column
+            justify-content: space-between
+            align-items: flex-start
+            #file-upload
+                display: flex
+                justify-content: left
+                align-items: center
+                #file-chosen
+                    font-size: 3vh
+                #input
+                    display: none
+                #custom-input
+                    margin: 5px
+                    padding: 5px
+                    font-size: 4vh
+                    width:16vw
+                    border: white 1px solid
+                    border-radius: 8px
+                    text-align: center
+                    &:hover
+                        color: black
+                        background: white
+            #select-container
+                display: flex
+                justify-content: center
+                align-items: center
+                #select
+                    margin: 5px
+                    padding: 5px
+                    width: 14vw
+                    text-align: center
+                    font-size: 5vh
+                    color: white
+                    background: black
+                    border-radius: 8px
+                #convertBtn
+                    background: black
+                    color: white
+                    margin: 5px
+                    padding: 5px
+                    border: white 1px solid
+                    border-radius: 8px
+                    font-size: 5vh
+                    width: 14vw
+                    &:hover
+                        background: white
+                        color: black
